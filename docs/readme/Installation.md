@@ -2,15 +2,15 @@
 
 ```sql
 CREATE DATABASE asset_packagist;
-CREATE USER 'asset-packagist'@'localhost' IDENTIFIED BY 'GOOD_PASSWORD';
-GRANT ALL PRIVILEGES ON asset_packagist.* TO 'asset-packagist'@'localhost';
+CREATE USER 'asset-packagist'@'%' IDENTIFIED BY 'GOOD_PASSWORD';
+GRANT ALL PRIVILEGES ON asset_packagist.* TO 'asset-packagist'@'%';
 FLUSH PRIVILEGES;
 ```
 
 ### Create the project with composer:
 
 ```sh
-composer create-project --stability=dev "hiqdev/asset-packagist.dev:*" dir
+composer create-project --stability=dev "hiqdev/asset-packagist.dev:*" asset-packagist
 ```
 
 ### Make configuration tuning:
@@ -30,22 +30,26 @@ DB_PASSWORD=YOUR_DB__PASSWORD
 ```
 
 ### Deploy the project
+这个命令可以导入数据库，创建初始化文件(数据库配置，必要的目录，yii2入口文件)，也可以手工处理这些工作
+我使用这个命令的时候会少创建一个文件，这个文件的模板在vendor/hiqdev/hidev-webapp/src/views/webapp/config/bootstrap.twig
+可以复制为src/config/bootstrap.php
 
 ```sh
 ./vendor/bin/hidev deploy
 ```
 
 Configure your web-server.
+这个命令是创建nginx的站点配置，如果你自己配置站点，可以不执行
 (hidev can install nginx config for you, run `./vendor/bin/hidev nginx/deploy`).
 
 Try to fetch your first package from web-interface or using the following command:
-
+以命令行方式获取包
 ```sh
 ./vendor/bin/hidev asset-package/update bower jquery
 ```
 
 ### Working with queues
-
+这个队列是用于安装依懒包的，需要驻留后台一直运行，每执行1000(原来是100个)个任务会自动退出1次,需要用进程管理工具自动启动
 Some operations such as package update will push tasks to queue.
 Run queue to execute that tasks:
 
@@ -60,3 +64,5 @@ to prevent permissions problems in `web/p` directory.
 
 Just skip yellow warnings `Couldn't read ...` - they are unimportant.
 
+添加git访问权限(不确定是否必需)
+如果站点是以www-data用户运行的，在/var/www/.ssh中创建ssh密钥并添加到github账号中
