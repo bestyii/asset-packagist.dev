@@ -33,7 +33,12 @@ DB_PASSWORD=YOUR_DB__PASSWORD
 这个命令可以导入数据库，创建初始化文件(数据库配置，必要的目录，yii2入口文件)，也可以手工处理这些工作
 我使用这个命令的时候会少创建一个文件，这个文件的模板在vendor/hiqdev/hidev-webapp/src/views/webapp/config/bootstrap.twig
 可以复制为src/config/bootstrap.php
-
+然后还要执行
+```sh
+composer dump-autoload
+````
+这条命令会根据.ENV的内容生成配置写入到vendor/hiqdev/composer-config-plugin-output目录
+最后执行以下命令进行初始化
 ```sh
 ./vendor/bin/hidev deploy
 ```
