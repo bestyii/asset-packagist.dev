@@ -14,7 +14,10 @@ return [
     'debug.enabled'         => false,
     'debug.allowedIps'      => ['127.0.0.1'],
 
-    'db.password'           => null,
+    'db.host'             => 'localhost',
+    'db.name'             => 'asset_packagist',
+    'db.username'         => 'asset-packagist',
+    'db.password'         => '',
 
     'sentry.enabled'        => false,
     'monitoring.flag'       => hiqdev\yii2\monitoring\Module::FLAG_DOMAIN,
