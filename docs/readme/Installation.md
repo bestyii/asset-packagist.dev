@@ -10,7 +10,7 @@ FLUSH PRIVILEGES;
 ### Create the project with composer:
 
 ```sh
-composer create-project --stability=dev "hiqdev/asset-packagist.dev:*" asset-packagist
+composer create-project --stability=dev "haohetao/asset-packagist.dev:*" asset-packagist
 ```
 
 ### Make configuration tuning:
