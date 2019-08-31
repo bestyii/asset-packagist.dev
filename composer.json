@@ -1,14 +1,14 @@
 {
-    "name": "hiqdev/asset-packagist.dev",
+    "name": "haohetao/asset-packagist.dev",
     "type": "yii2-extension",
     "description": "asset-packagist.dev",
-    "homepage": "http://asset-packagist.org/",
+    "homepage": "http://asset-packagist.youtuoweb.com/",
     "license": "BSD-3-Clause",
     "support": {
         "email": "support@hiqdev.com",
-        "source": "https://github.com/hiqdev/asset-packagist.dev",
-        "issues": "https://github.com/hiqdev/asset-packagist.dev/issues",
-        "wiki": "https://github.com/hiqdev/asset-packagist.dev/wiki",
+        "source": "https://github.com/haohetao/asset-packagist.dev",
+        "issues": "https://github.com/haohetao/asset-packagist.dev/issues",
+        "wiki": "https://github.com/haohetao/asset-packagist.dev/wiki",
         "forum": "http://forum.hiqdev.com/"
     },
     "authors": [
@@ -35,6 +35,12 @@
             "role": "QA Lead",
             "email": "bladeroot@gmail.com",
             "homepage": "http://hiqdev.com/"
+        },
+        {
+            "name": "hetao",
+            "role": "Project Lead",
+            "email": "haohetao@gmail.com",
+            "homepage": "http://haohetao.iteye.com/"
         }
     ],
     "require": {
