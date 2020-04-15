@@ -1,3 +1,13 @@
+### 运行环境
+因为composer-config-plugin使用了php7.4的语法，所以要求用php7.4才能运行  
+hiqdev\yii2\menus\widgets\Menu中有一处notice级错误，所以设置  
+error_reporting = E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED  
+mysql 8.0  
+extensions
+zip pdo mysqli mbstring ctype gd curl
+software
+git ssh zip unzip
+
 ### Create the DB in MySQL:
 
 ```sql

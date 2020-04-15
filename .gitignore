@@ -19,10 +19,12 @@
 .settings
 Thumbs.db
 nbproject
+*.log
 
 # HiSite directories
 /runtime/*
 /web/assets/*
+/public/assets/*
 
 # composer internals
 /composer.lock
@@ -39,6 +41,7 @@ chkipper.phar
 composer.phar
 ocular.phar
 php-cs-fixer.phar
+phpstan.phar
 phpunit-skelgen.phar
 phpunit.phar
 

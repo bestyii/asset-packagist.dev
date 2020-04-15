@@ -14,7 +14,7 @@ return [
     'debug.enabled'         => false,
     'debug.allowedIps'      => ['127.0.0.1'],
 
-    'db.host'             => 'localhost',
+    'db.host'             => '192.168.31.3',
     'db.name'             => 'asset_packagist',
     'db.username'         => 'asset-packagist',
     'db.password'         => '',
