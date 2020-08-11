@@ -11,7 +11,7 @@
 return [
     'cookieValidationKey'   => null,
 
-    'debug.enabled'         => true,
+    'debug.enabled'         => false,
     'debug.allowedIps'      => ['*'],
 
     'db.host'             => 'localhost',
