@@ -65,10 +65,14 @@
             ]
         }
     },
-    "repositories": [
-        {
+    "repositories": {
+        "github": {
+            "type": "vcs",
+            "url": "https://github.com/bestyii/asset-packagist"
+        },
+        "asset": {
             "type": "composer",
-            "url": "https://repo.asset-packagist.youtuoapp.com"
+            "url": "http://asset-packagist.cn"
         }
-    ]
+    }
 }
