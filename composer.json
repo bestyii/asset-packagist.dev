@@ -1,78 +1,89 @@
 {
-    "name": "hiqdev/asset-packagist.dev",
-    "type": "yii2-extension",
-    "description": "asset-packagist.dev",
-    "homepage": "http://asset-packagist.org/",
-    "license": "BSD-3-Clause",
-    "support": {
-        "email": "support@hiqdev.com",
-        "source": "https://github.com/haohetao/asset-packagist.dev",
-        "issues": "https://github.com/haohetao/asset-packagist.dev/issues",
-        "wiki": "https://github.com/haohetao/asset-packagist.dev/wiki",
-        "forum": "http://forum.hiqdev.com/"
+  "name": "hiqdev/asset-packagist.dev",
+  "type": "yii2-extension",
+  "description": "asset-packagist.dev",
+  "homepage": "http://asset-packagist.org/",
+  "license": "BSD-3-Clause",
+  "support": {
+    "email": "support@hiqdev.com",
+    "source": "https://github.com/haohetao/asset-packagist.dev",
+    "issues": "https://github.com/haohetao/asset-packagist.dev/issues",
+    "wiki": "https://github.com/haohetao/asset-packagist.dev/wiki",
+    "forum": "http://forum.hiqdev.com/"
+  },
+  "authors": [
+    {
+      "name": "Andrii Vasyliev",
+      "role": "Project lead",
+      "email": "sol@hiqdev.com",
+      "homepage": "http://hipanel.com/"
     },
-    "authors": [
-        {
-            "name": "Andrii Vasyliev",
-            "role": "Project lead",
-            "email": "sol@hiqdev.com",
-            "homepage": "http://hipanel.com/"
-        },
-        {
-            "name": "Dmitry Naumenko",
-            "role": "Lead backend developer",
-            "email": "d.naumenko.a@gmail.com",
-            "homepage": "http://silverfire.me/"
-        },
-        {
-            "name": "Andrey Klochok",
-            "role": "Lead frontend developer",
-            "email": "andreyklochok@gmail.com",
-            "homepage": "http://hiqdev.com/"
-        },
-        {
-            "name": "Yuriy Myronchuk",
-            "role": "QA Lead",
-            "email": "bladeroot@gmail.com",
-            "homepage": "http://hiqdev.com/"
-        }
-    ],
-    "require": {
-        "hiqdev/yii2-theme-original": "~0.1 || dev-master",
-        "hiqdev/yii2-yandex-metrika": "~0.1",
-        "hiqdev/yii2-asset-hiqdev": "~0.2",
-        "hiqdev/yii2-monitoring": "*@dev",
-        "haohetao/asset-packagist": "dev-master",
-        "mito/yii2-sentry": "*"
+    {
+      "name": "Dmitry Naumenko",
+      "role": "Lead backend developer",
+      "email": "d.naumenko.a@gmail.com",
+      "homepage": "http://silverfire.me/"
     },
-    "require-dev": {
-        "yiisoft/yii2-debug": "^2.0",
-        "hiqdev/hidev-php": "~0.6",
-        "hiqdev/hidev-hiqdev": "~0.6"
+    {
+      "name": "Andrey Klochok",
+      "role": "Lead frontend developer",
+      "email": "andreyklochok@gmail.com",
+      "homepage": "http://hiqdev.com/"
     },
-    "keywords": [],
-    "autoload": {
-        "psr-4": {
-            "hiqdev\\sites\\assetpackagistorg\\": "src"
-        }
-    },
-    "minimum-stability": "dev",
-    "extra": {
-        "config-plugin": {
-            "params": [
-                "src/config/params.php",
-                "?src/config/params-local.php"
-            ]
-        }
-    },
-    "repositories": {
-        "github": {
-            "type": "vcs",
-            "url": "https://github.com/bestyii/asset-packagist"
-        },
-        "asset": {
-            "type": "composer",
-            "url": "http://asset-packagist.cn"
-        }
+    {
+      "name": "Yuriy Myronchuk",
+      "role": "QA Lead",
+      "email": "bladeroot@gmail.com",
+      "homepage": "http://hiqdev.com/"
     }
+  ],
+  "require": {
+    "hiqdev/yii2-theme-original": "~0.1 || dev-master",
+    "hiqdev/yii2-yandex-metrika": "~0.1",
+    "hiqdev/yii2-asset-hiqdev": "~0.2",
+    "hiqdev/yii2-monitoring": "*@dev",
+    "haohetao/asset-packagist": "dev-master",
+    "mito/yii2-sentry": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "^2.0",
+    "hiqdev/hidev-php": "~0.6",
+    "hiqdev/hidev-hiqdev": "~0.6"
+  },
+  "keywords": [],
+  "autoload": {
+    "psr-4": {
+      "hiqdev\\sites\\assetpackagistorg\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "config-plugin": {
+      "params": [
+        "src/config/params.php",
+        "?src/config/params-local.php"
+      ]
+    }
+  },
+  "repositories": {
+    "0": {
+      "type": "path",
+      "url": "./extensions/*/*",
+      "options": {
+        "symlink": true
+      }
+    },
+    "github": {
+      "type": "vcs",
+      "url": "https://github.com/bestyii/asset-packagist"
+    },
+    "github": {
+      "type": "vcs",
+      "url": "https://github.com/bestyii/yii2-hiart-librariesio"
+    },
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.cn"
+    }
+  }
 }
